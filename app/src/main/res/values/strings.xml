@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">JavaStartApp</string>
+    <string name="intent_subject">Tytuł</string>
+    <string name="intent_text">Treść</string>
+    <string name="intent_send">wyślij</string>
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/intent_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:autofillHints=""
+        android:hint="@string/intent_subject"
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/intent_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intent_subject"
+        android:autofillHints=""
+        android:ems="10"
+        android:ellipsize="end"
+        android:hint="@string/intent_text"
+        android:inputType="textMultiLine"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/intent_sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@id/intent_text"
+        android:layout_centerHorizontal="true"
+        android:onClick="sendButton"
+        android:text="@string/intent_send"/>
+
+</RelativeLayout>
