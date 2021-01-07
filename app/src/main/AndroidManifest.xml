@@ -12,11 +12,14 @@
 
         <activity android:name=".InputActivity"
             android:label="Łączenie layoutu z Activity">
-
         </activity>
 
         <activity android:name=".SecondActivity_Intent"
             android:label="Intents">
+      </activity>
+
+        <activity android:name=".RecyclerViewActivity"
+            android:label="Przykład użycia RecycklerView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/animal_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/cat_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Zmień obraz" />
+
+    <TextView
+        android:id="@+id/animal_name"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@+id/animal_image"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="@+id/animal_image"
+        app:layout_constraintEnd_toStartOf="@+id/delete_animal_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/animal_image"
+        app:layout_constraintTop_toTopOf="@+id/animal_image"
+        app:layout_constraintVertical_bias="0.578"
+        tools:text="Kot" />
+
+    <ImageButton
+        android:id="@+id/delete_animal_button"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:selectableItemBackground"
+        android:padding="8dp"
+        android:src="@drawable/del_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Usuń"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
