@@ -2,11 +2,11 @@ package com.example.javastartapp.model;
 
 import android.media.Image;
 
-public class Animal {
+public class AnimalRecyclerView {
     Integer mImage;
     String mDescription;
 
-    public Animal(Integer image, String description) {
+    public AnimalRecyclerView(Integer image, String description) {
         mImage = image;
         mDescription = description;
     }

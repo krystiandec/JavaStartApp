@@ -1,4 +1,4 @@
-package com.example.javastartapp;
+package com.example.javastartapp.activity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.javastartapp.model.Animal;
+import com.example.javastartapp.R;
+import com.example.javastartapp.model.AnimalRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,17 +32,17 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.sampleRecyclerView);
 
-        Animal[] posibleAnimal = {
-                new Animal(R.drawable.cat_icon, "Kot"),
-                new Animal(R.drawable.dog_icon, "Pies"),
-                new Animal(R.drawable.ele_icon, "Słoń")};
+        AnimalRecyclerView[] posibleAnimal = {
+                new AnimalRecyclerView(R.drawable.cat_icon, "Kot"),
+                new AnimalRecyclerView(R.drawable.dog_icon, "Pies"),
+                new AnimalRecyclerView(R.drawable.ele_icon, "Słoń")};
 
-        List<Animal> animals = new ArrayList<>();
+        List<AnimalRecyclerView> animals = new ArrayList<>();
         Random random = new Random();
         for (int i = 0;
              i < 10; i++) {
-            Animal randomAnimal = posibleAnimal[random.nextInt(posibleAnimal.length)];
-            Animal animal = new Animal(randomAnimal.getImage(), randomAnimal.getDescription() + " " + (i + 1));
+            AnimalRecyclerView randomAnimal = posibleAnimal[random.nextInt(posibleAnimal.length)];
+            AnimalRecyclerView animal = new AnimalRecyclerView(randomAnimal.getImage(), randomAnimal.getDescription() + " " + (i + 1));
             animals.add(animal);
         }
 
@@ -52,9 +53,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
 
     private class AnimalsAdapter extends RecyclerView.Adapter<AnimalsAdapter.AnimalsAdapterViewHolder> {
-        private List<Animal> animals;
+        private List<AnimalRecyclerView> animals;
 
-        public AnimalsAdapter(List<Animal> animals) {
+        public AnimalsAdapter(List<AnimalRecyclerView> animals) {
             this.animals = animals;
         }
 
@@ -82,7 +83,13 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull AnimalsAdapterViewHolder holder, int position) {
-            Animal animal = animals.get(position);
+            if (position % 2 == 0) {
+                holder.itemView.setBackgroundColor(getBaseContext().getResources().getColor(R.color.white));
+            }else{
+                holder.itemView.setBackgroundColor(getBaseContext().getResources().getColor(R.color.black));
+            }
+
+            AnimalRecyclerView animal = animals.get(position);
             holder.animalName.setText(animal.getDescription());
             holder.animalImage.setImageResource(animal.getImage());
             holder.animalDeleteButton.setOnClickListener(v -> {

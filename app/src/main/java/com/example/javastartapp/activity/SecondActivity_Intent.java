@@ -1,4 +1,4 @@
-package com.example.javastartapp;
+package com.example.javastartapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.javastartapp.R;
 
 public class SecondActivity_Intent extends AppCompatActivity {
 
