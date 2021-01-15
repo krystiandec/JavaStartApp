@@ -1,4 +1,4 @@
-package com.example.javastartapp.view;
+package com.example.javastartapp.presenter;
 
 import android.app.Activity;
 import android.os.Bundle;

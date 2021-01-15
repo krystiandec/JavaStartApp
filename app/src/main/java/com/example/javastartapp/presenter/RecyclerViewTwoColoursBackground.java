@@ -1,4 +1,4 @@
-package com.example.javastartapp.view;
+package com.example.javastartapp.presenter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -30,12 +30,12 @@ public class RecyclerViewTwoColoursBackground extends Activity {
         //poniższe z wykorzystaniem Adaptera RecyclerView oraz jawnych layoutów
         setContentView(R.layout.recycler_view);
         RecyclerView recyclerView = findViewById(R.id.sampleRecyclerView);
-        final String[] animals = { "Kot", "Pies", "Słoń", "Kot", "Pies", "Słoń", "Kot", "Pies", "Słoń", "Kot", "Pies",
-                "Słoń" };
+        final String[] animals = {"Kot", "Pies", "Słoń", "Kot", "Pies", "Słoń", "Kot", "Pies", "Słoń", "Kot", "Pies",
+                "Słoń"};
         mAdapter = new RecyclerViewTwoColoursBackgroundAdapter(animals);
-        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(mAdapter);
-
+    }
 /*
 //        metoda krótsza z wykorzystaniem ListView
         setContentView(R.layout.animal_list);
@@ -46,7 +46,7 @@ public class RecyclerViewTwoColoursBackground extends Activity {
         animalList.setAdapter(adapter);
 */
 
-    }
+
 
 /*    private class AlternatelyColorAdapter extends BaseAdapter {
 

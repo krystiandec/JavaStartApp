@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp">
+
+    <fragment
+        class="com.example.javastartapp.presenter.AnimalListFragmentPresenter"
+        android:id="@+id/animal_list_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        tools:layout="@layout/animal_list"/>
+
+    <FrameLayout
+        android:id="@+id/container_animal_details"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_weight="50">
+        <TextView
+            android:id="@+id/label_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Wybierz element z listy aby otrzymać podgląd." />
+    </FrameLayout>
+
+
+</LinearLayout>

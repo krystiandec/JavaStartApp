@@ -10,29 +10,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JavaStartApp">
 
-        <activity android:name=".activity.InputActivity"
+
+        <activity
+            android:name=".activity.InputActivity"
             android:label="Łączenie layoutu z Activity">
         </activity>
 
-        <activity android:name=".activity.SecondActivity_Intent"
+        <activity
+            android:name=".activity.SecondActivity_Intent"
             android:label="Intents">
-      </activity>
+        </activity>
 
-        <activity android:name=".activity.RecyclerViewActivity"
+        <activity
+            android:name=".activity.RecyclerViewActivity"
             android:label="Przykład użycia RecycklerView">
         </activity>
 
-        <activity android:name=".view.RecyclerViewTwoColoursBackground"
+        <activity
+            android:name=".presenter.RecyclerViewTwoColoursBackground"
             android:label="Test kolorów">
+        </activity>
+
+        <activity
+            android:name=".activity.ActivityLayoutDependingOnOrientation"
+            android:label="Test kolorów">
+        </activity>
+        <!--fragmenty-->
+        <activity android:name=".activity.AnimalFragmentActivity">
 
         </activity>
-        <activity android:name=".view.ActivityLayoutDependingOnOrientation"
-            android:label="Test kolorów">
+        <activity android:name=".activity.AnimalFragmentListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
